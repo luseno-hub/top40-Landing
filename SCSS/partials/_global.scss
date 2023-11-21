@@ -1,0 +1,21 @@
+body {
+  font-family: $font-body;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-title;
+}
+
+.section-title {
+  text-align: center;
+  font-family: $font-title;
+  font-size: clamp(2rem, 4vw + 1rem, 6.25rem);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
