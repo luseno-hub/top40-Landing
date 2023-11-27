@@ -394,6 +394,20 @@ body {
   box-sizing: border-box;
 }
 
+.container {
+  width: 100%;
+  max-width: 1210px;
+  padding: 0 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 h1,
 h2,
 h3,
@@ -410,10 +424,6 @@ h6 {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-}
-
-.section {
-  padding: 100px;
 }
 
 .link-CTA {
@@ -636,6 +646,7 @@ footer {
 }
 footer .contact {
   text-align: center;
+  padding-top: 100px;
 }
 footer .contact__callout {
   color: #d9ae91;
@@ -656,6 +667,7 @@ footer .engagement-section {
   justify-content: space-between;
   align-items: flex-start;
   flex-shrink: 0;
+  padding: 100px 0;
 }
 footer .socials {
   display: flex;
@@ -699,16 +711,18 @@ footer .subscribe__input button[type=submit] {
   cursor: pointer;
 }
 footer .copyright {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-shrink: 0;
   height: auto;
   background-color: #141414;
   padding-top: 0.62rem;
   padding-bottom: 0.62rem;
 }
-footer .copyright p {
+footer .copyright__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+footer .copyright__info p {
   color: #767676;
   font-family: "Bebas Neue", sans-serif;
 }/*# sourceMappingURL=style.css.map */

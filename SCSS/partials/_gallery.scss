@@ -63,6 +63,7 @@ footer {
 
   .contact {
     text-align: center;
+    padding-top: 100px;
 
     &__callout {
       color: $accent-dark;
@@ -86,6 +87,7 @@ footer {
     justify-content: space-between;
     align-items: flex-start;
     flex-shrink: 0;
+    padding: 100px 0;
   }
 
   .socials {
@@ -136,18 +138,21 @@ footer {
   }
 
   .copyright {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-shrink: 0;
     height: auto;
     background-color: $rich-black;
     padding-top: 0.62rem;
     padding-bottom: 0.62rem;
 
-    p {
-      color: $slate-500;
-      font-family: $font-title;
+    &__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+
+      p {
+        color: $slate-500;
+        font-family: $font-title;
+      }
     }
   }
 }
