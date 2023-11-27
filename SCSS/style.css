@@ -9,7 +9,6 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-text-size-adjust: 100%;
-   -ms-text-size-adjust: 100%;
        text-size-adjust: 100%;
 }
 
@@ -45,8 +44,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box; /* 1 */
+  box-sizing: content-box; /* 1 */
   height: 0; /* 1 */
   overflow: visible; /* 2 */
 }
@@ -217,8 +215,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
+  box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
   max-width: 100%; /* 1 */
@@ -246,8 +243,7 @@ textarea {
  */
 [type=checkbox],
 [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; /* 1 */
+  box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -392,6 +388,12 @@ body {
   font-family: "ProductSans", sans-serif;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -410,19 +412,17 @@ h6 {
   line-height: normal;
 }
 
+.section {
+  padding: 100px;
+}
+
 .header-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 1210px;
   margin: 0 auto;
 }
 .header-nav nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 2rem;
 }
@@ -472,17 +472,10 @@ h6 {
   text-align: center;
 }
 .partners__grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 .partners .section-title {
   color: #d9d9d9;
@@ -490,14 +483,14 @@ h6 {
 
 .gallery {
   width: 100%;
-  height: 40rem;
+  height: 840px;
   background-color: #d9ae91;
   background-image: url(../../assets/bd-top40.jpeg);
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   -o-border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), #000);
-     border-image: fill 0 -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(#000));
      border-image: fill 0 linear-gradient(rgba(0, 0, 0, 0.2), #000);
-  display: -ms-grid;
   display: grid;
   place-content: center;
   position: relative;
@@ -511,10 +504,39 @@ h6 {
 .gallery__link a {
   display: inline-block;
   width: -moz-fit-content;
-  width: -webkit-fit-content;
   width: fit-content;
   padding: 1.5rem 2rem;
   color: #ffe1cd;
   border: 1px solid #ffe1cd;
   text-decoration: none;
 }
+
+.current-finalists .finalists {
+  width: 100%;
+  height: 840px;
+  background-color: #d9ae91;
+  background-image: url(../../assets/bd-top40.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.previous-finalists {
+  width: 100%;
+  height: 500px;
+  background-color: #ffe1cd;
+}
+.previous-finalists__links {
+  text-align: center;
+}
+.previous-finalists__links-single {
+  padding: 10px 16px;
+  text-align: center;
+  border-radius: 32px;
+  background: #eecab1;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}/*# sourceMappingURL=style.css.map */

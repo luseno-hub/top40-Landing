@@ -2,6 +2,12 @@ body {
   font-family: $font-body;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -18,4 +24,8 @@ h6 {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+.section {
+  padding: 100px;
 }
